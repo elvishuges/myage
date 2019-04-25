@@ -15,7 +15,9 @@ class Age{
  }
 
  public function calculate(){
-     return $this->currentYear->diff($this->dob)->format("%y");
+    $difference = $this->currentYear->diff($this->dob);
+    $age = $difference->y;
+    return $age;
  }
     
 }
